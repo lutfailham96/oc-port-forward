@@ -13,5 +13,9 @@
   },
   "dependencies": {
     "minimist": "^1.2.6"
-  }
+  },
+  "keywords": [
+    "openshift",
+    "port-forward"
+  ]
 }
