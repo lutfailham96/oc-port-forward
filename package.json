@@ -1,0 +1,17 @@
+{
+  "name": "oc-port-forward",
+  "version": "1.0.0",
+  "description": "Simple OC port forward",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lutfa Ibtihaji Ilham",
+  "license": "ISC",
+  "bin": {
+    "oc-port-forward": "index.js"
+  },
+  "dependencies": {
+    "minimist": "^1.2.6"
+  }
+}
