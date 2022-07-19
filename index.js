@@ -9,7 +9,12 @@ const showHelp = () => {
   console.info('Usage:\n\t--project\tProject name, ex: my-project\n\t--pods\t\tPods name to be forwarded, usually same as deployment name\n\t--port\t\tForwarded port, ex: 8080:8080\n\nExample: npx oc-port-forward --project my-project --pods webserver --port 8080:8080');
 };
 
-if (!Object.keys(argv).every((key) => reservedArgsKeys.includes(key))) {
+Object.assign(argv, {
+  ...argv,
+  _: null
+});
+
+if (!reservedArgsKeys.every((key) => Object.keys(argv).includes(key))) {
   showHelp();
   process.exit(1);
 }
